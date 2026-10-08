@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS control_escolar CHARACTER SET utf8mb4;
+USE control_escolar;
+
+CREATE TABLE alumnos (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  matricula VARCHAR(20) NOT NULL UNIQUE,
+  nombre VARCHAR(100) NOT NULL,
+  grupo VARCHAR(10) NOT NULL,
+  calificacion DECIMAL(4,2) DEFAULT 0
+);
